@@ -1,10 +1,10 @@
-let individualScores = [75, 12]
-var teamScore = 0
-for score in individualScores {
-    if score > 50 {
-        teamScore += 3
-    } else {
-        teamScore += 1
-    }
+// Задание 2. Создать две переменных: одна равна 7, другая 20. Если результат перемножения этих переменных больше 10, 
+//то вывести в консоль первую переменную, в противном случае вывести вторую.
+
+var a = 7
+var b = 20
+if a * b > 10 {
+    print(a)
+} else {
+    print(b)
 }
-print(teamScore)
