@@ -6,7 +6,6 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 # This file belongs to Zubarev
-run.bat
 
 # User-specific files
 *.rsuser
@@ -14,6 +13,8 @@ run.bat
 *.user
 *.userosscache
 *.sln.docstates
+
+run.bat
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
