@@ -1,3 +1,5 @@
+// задание 3. Добавить возможность получения названия пиццы через rawValue.
+
 enum Coffee: String {
     case latte
     case cappuccino
@@ -5,7 +7,6 @@ enum Coffee: String {
     }
 
 
-    
 func getName(coffee: Coffee) -> String {
     coffee.rawValue
 }
