@@ -1,11 +1,11 @@
 enum Coffee: String {
-    case latte = "Latte"
-    case cappuccino = "Cappuccino"
-    case espresso = "Espresso"
-}
+    case latte
+    case cappuccino
+    case espresso
+    }
 
-// let coffeeName = Coffee.latte.rawValue
 
+    
 func getName(coffee: Coffee) -> String {
     coffee.rawValue
 }
