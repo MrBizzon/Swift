@@ -1,5 +1,5 @@
 enum Coffee {
-    case latte = "Latte"
+    case latte
     case cappuccino
     case espresso
 }
