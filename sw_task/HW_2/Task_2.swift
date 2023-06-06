@@ -1,19 +1,19 @@
 // Задание 2. Создать перечисление, которое содержит 3 вида пиццы, и создать переменные с каждым видом пиццы.
 
 enum Coffee {
-    case latte
-    case cappuccino
-    case espresso
+    case margaret
+    case neapolitan
+    case capricious
 }
 
 func getCost(coffee: Coffee) -> Double {
     switch coffee {
-    case .latte: return 150
-    case .cappuccino: return 200
-    case .espresso: return 300
+    case .margaret: return 150
+    case .neapolitan: return 200
+    case .capricious: return 300
     }      
 }
 
-print(getCost(coffee: .latte))
-print(getCost(coffee: .cappuccino))
-print(getCost(coffee: .espresso))
+print(getCost(coffee: .margaret))
+print(getCost(coffee: .neapolitan))
+print(getCost(coffee: .capricious))
