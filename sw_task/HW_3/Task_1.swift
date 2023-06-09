@@ -2,7 +2,11 @@
 // в виде массива видов чая, которые хотят заказать). Необходимо последовательно выводить в консоль сколько заплатит покупатель 
 // (необходимо вывести его номер по порядку, чай, который он заказал и стоимость).
 
-var animals = ["cats", "dogs", "chimps", "moose", "chimps"]
-
-animals = animals.filter(){$0 != "chimps"}
-print(animals) // ["cats", "dogs", "moose"]
+let tea = ["Пуэр", "Улун", "Да Хун Пао", "Ассам"]
+let cost = [10, 20, 30, 40]
+var seq = zip(tea, cost)
+ 
+var dict = Dictionary(uniqueKeysWithValues:seq)
+for (key, value) in dict {
+    print("\(key) - \(value)")
+}
