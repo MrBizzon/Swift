@@ -10,9 +10,9 @@ func getPizza() {
 }
 
 var latte = Pizza(name: "Latte", cost: 110)
-var margaret = Pizza(name: "Margaret", cost: 111)
-var pepperoni = Pizza(name: "Pepperoni", cost: 111)
-var carbonara = Pizza(name: "Carbonara", cost: 111)
+var margaret = Pizza(name: "Margaret", cost: 112)
+var pepperoni = Pizza(name: "Pepperoni", cost: 113)
+var carbonara = Pizza(name: "Carbonara", cost: 114)
 
 latte.getPizza()
 margaret.getPizza()
