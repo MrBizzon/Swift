@@ -25,6 +25,7 @@ struct frenchFries: MenuProtocol {
         }
         return cost - cost * Double(sale) / 100
     }
+    
 }
 
 class Pizzeria {
