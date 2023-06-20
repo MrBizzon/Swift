@@ -14,5 +14,3 @@ enum Position {
 class PizzaShop {
     var employees: [PizzaEmployee] = []
 }
-
-
