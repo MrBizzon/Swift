@@ -1,3 +1,6 @@
+// Добавить в класс пиццерии свойство, в котором хранится массив столиков. У класса столика добавить свойство, в котором хранится кафе, 
+// в котором стоит столик. Столики создаются сразу в инициализаторе, не передаются туда в качестве параметра.
+
 class PizzaRestaurant { 
   var tables: [Table] = []
   
@@ -18,31 +21,8 @@ class Table {
     self.number = number
   }
 }
-Результат:
 
-class PizzaRestaurant {
-  var tables: [Table] = []
-  
-  init() {
-    for i in 1...10 {
-      let table = Table(cafe: self, number: i)
-      tables.append(table)
-    }
-  }
-}
-
-class Table {
-  let cafe: PizzaRestaurant
-  let number: Int
-  
-  init(cafe: PizzaRestaurant, number: Int) {
-    self.cafe = cafe
-    self.number = number
-  }
-}
-
-
-// Либо так:
+// Либо полностью:
 
 // struct Employee {
 //     var name: String
