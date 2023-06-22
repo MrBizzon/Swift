@@ -22,6 +22,7 @@ class Table {
   }
 }
 
+
 // Либо полностью:
 
 // struct Employee {
