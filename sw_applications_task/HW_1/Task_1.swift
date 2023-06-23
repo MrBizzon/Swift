@@ -4,6 +4,7 @@
 
 // Проект 1
 // Удаление сториборд
+
 // Открываю проект в Xcode.
 // Открываю файл Info.plist.
 // Удаляю строку Main storyboard file base name.
@@ -24,6 +25,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 // Проект 2
 // Оставление сториборд
+
 // Открываю проект в Xcode.
 // Оставляю строку Main storyboard file base name в файле Info.plist.
 // Редактирую файл AppDelegate.swift, чтобы оставить упоминания сториборд.
