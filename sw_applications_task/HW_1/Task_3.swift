@@ -6,30 +6,39 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    
+
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+
+        // Устанавливаем заголовок контроллера представления
+        title = "Login"
+
+        // Устанавливаем цвет фона
+        view.backgroundColor = UIColor.white
+
+        // Настройка текстового поля для входа в систему
+        loginTextField.placeholder = "Enter your username"
+        loginTextField.borderStyle = .roundedRect
+        loginTextField.autocapitalizationType = .none
+        loginTextField.autocorrectionType = .no
+        loginTextField.spellCheckingType = .no
+        loginTextField.returnKeyType = .next
+
+        // Настройка текстового поля пароля
+        passwordTextField.placeholder = "Enter your password"
+        passwordTextField.isSecureTextEntry = true
+        passwordTextField.borderStyle = .roundedRect
+        passwordTextField.returnKeyType = .done
+
+        // Добляем кнопку входа в систему на панель навигации
+        let loginButton = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(LoginViewController.loginButtonTapped))
+        navigationItem.rightBarButtonItem = loginButton
     }
-    
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-        // Your login logic here
+
+    @objc func loginButtonTapped() {
+        // Обработка события нажатия кнопки входа в систему
     }
-    
-    @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        // Your forgot password logic here
-    }
-    
 }
-# Login Screen
-
-![Login Screen](login_screen.png)
-
-- Login Text Field
-- Password Text Field
-- Login Button
-- Forgot Password Button

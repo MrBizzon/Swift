@@ -5,41 +5,30 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class ViewController: UIViewController {
 
-    let logoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "logo")
-        return imageView
-    }()
-    
-    let usernameTextField: UITextField = {
+    let loginTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Логин"
         textField.borderStyle = .roundedRect
-        textField.autocapitalizationType = .none
+        textField.placeholder = "Логин"
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
     let passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "Пароль"
         textField.borderStyle = .roundedRect
-        textField.isSecureTextEntry = true
+        textField.placeholder = "Пароль"
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
     let loginButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitleColor(.white, for: .normal)
+        let button = UIButton()
         button.setTitle("Войти", for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.backgroundColor = .blue
         button.layer.cornerRadius = 5
-        button.clipsToBounds = true
-        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -47,40 +36,28 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        setupViews()
-    }
-    
-    func setupViews() {
-        view.addSubview(logoImageView)
-        view.addSubview(usernameTextField)
+        
+        view.addSubview(loginTextField)
         view.addSubview(passwordTextField)
         view.addSubview(loginButton)
         
         NSLayoutConstraint.activate([
-            logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            logoImageView.widthAnchor.constraint(equalToConstant: 150),
-            logoImageView.heightAnchor.constraint(equalToConstant: 150),
+            loginTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            loginTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            loginTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            loginTextField.heightAnchor.constraint(equalToConstant: 30),
             
-            usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 50),
-            usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            usernameTextField.heightAnchor.constraint(equalToConstant: 40),
-            
-            passwordTextField.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 20),
-            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            passwordTextField.heightAnchor.constraint(equalToConstant: 40),
+            passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor, constant: 20),
+            passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 30),
             
             loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 50),
-            loginButton.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor),
-            loginButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor),
-            loginButton.heightAnchor.constraint(equalToConstant: 50)
+            loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            loginButton.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
-    
-    @objc func didTapLoginButton() {
-        // Handle login
-    }
-
 }
+
+
