@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.returnKeyType = .done
 
-        // Добляем кнопку входа в систему на панель навигации
+        // Добавляем кнопку входа в систему на панель навигации
         let loginButton = UIBarButtonItem(title: "Login", style: .plain, target: self, action: #selector(LoginViewController.loginButtonTapped))
         navigationItem.rightBarButtonItem = loginButton
     }
