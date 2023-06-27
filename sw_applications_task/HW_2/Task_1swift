@@ -1,0 +1,39 @@
+// В проект без сториборд добавить новый экран. 
+// На экране должно отображаться 5 ячеек. Раздел всего один. Ячейка должна соответствовать схеме.
+
+import UIKit
+
+class MyViewController: UITableViewController {
+
+    let cellReuseIdentifier = "MyCell"
+    let rowCount = 5
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        tableView.register(MyCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+    }
+
+    // Источник данных табличного представления
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return rowCount
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! MyCell
+        
+        return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    }
+}
+
+class MyCell: UITableViewCell {
+}
