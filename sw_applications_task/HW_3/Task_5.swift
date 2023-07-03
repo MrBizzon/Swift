@@ -21,7 +21,6 @@ class ViewController: UIViewController, WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         let response = navigationResponse.response as? HTTPURLResponse
         if let url = response?.url, url.host == "example.com" {
-            // Extract token and userID from the response
             let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
             if let queryItems = urlComponents?.queryItems {
                 for item in queryItems {
