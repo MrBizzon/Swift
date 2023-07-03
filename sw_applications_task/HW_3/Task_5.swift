@@ -27,11 +27,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
                 for item in queryItems {
                     if item.name == "token" {
                         let token = item.value
-                        // Perform further actions with the token
+                        // Дальнейшие действия с токеном
                     }
                     if item.name == "user_id" {
                         let userID = item.value
-                        // Perform further actions with the user ID
+                        // Дальнейшие действия с user ID
                     }
                 }
             }
