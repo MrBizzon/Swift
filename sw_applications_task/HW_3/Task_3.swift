@@ -37,4 +37,4 @@ class ViewController: UIViewController, WKNavigationDelegate {
     }
 }
 
-// В коде нужно заменить YOUR_APP_CLIENT_ID на идентификатор вашего приложения VK.
+// В коде нужно заменить YOUR_APP_CLIENT_ID на идентификатор приложения VK.
