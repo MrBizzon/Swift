@@ -12,6 +12,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
 Создан новый проект с использованием SwiftUI. В структуре ContentView определен основной интерфейс 
 с помощью Text, который выводит строку "Новый проект для GB". Также к этому тексту применяется отступ 
 с помощью .padding().
